@@ -1,0 +1,93 @@
+.contenedor-acordeon {
+    width: 700px;
+}
+
+.seccion-acordeon {
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.titulo-seccion {
+    background: #f8f9fa;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+.titulo-seccion:hover {
+    background: #e9ecef;
+}
+
+.seccion-acordeon.activo .titulo-seccion {
+    background: #008CD7;
+    color: white;
+}
+
+.icono-flecha {
+    font-size: 20px;
+}
+
+.contenido-seccion {
+    display: none;
+    padding: 30px 20px;
+}
+
+.seccion-acordeon.activo .contenido-seccion {
+    display: block;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.contenedor-campo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.boton-continuar {
+    background: #00B6EF;
+    color: white;
+}
+
+.boton-finalizar {
+    background: #4caf50;
+    color: white;
+}

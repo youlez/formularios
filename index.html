@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -11,7 +11,11 @@
   <body>
     <div class="barra-superior">
       <div class="titulo">
-        <h1>Actividad 2 - Formularios</h1>
+        <h1>Actividad 2 - Formularios</h1><br>
+        <b>Realizado por:</b><br>
+        <span>Ana Maria Ceròn Bueno</span><br>
+        <span>Karent Youlez Pinzon Figueredo</span>
+
       </div>
     </div>
     <div class="contenedor-principal">
@@ -21,27 +25,28 @@
             <span>Paso 1: Datos Personales</span>
             <span class="icono-flecha">▼</span>
           </div>
-          <div class="stepper-wrapper">
-          <div class="stepper-container">
-  <ul class="stepper">
-    <li class="step active" data-step="1">
-      <span class="circle">1</span>
-      <span class="label">Datos personales</span>
-    </li>
 
-    <li class="step" data-step="2">
-      <span class="circle">2</span>
-      <span class="label">Envío</span>
-    </li>
-
-    <li class="step" data-step="3">
-      <span class="circle">3</span>
-      <span class="label">Pago</span>
-    </li>
-  </ul>
-</div>
-</div>
           <div class="contenido-seccion">
+            <div class="stepper-wrapper">
+              <div class="stepper-container">
+                <ul class="stepper">
+                  <li class="step active" data-step="1">
+                    <span class="circle">1</span>
+                    <span class="label">Datos personales</span>
+                  </li>
+
+                  <li class="step" data-step="2">
+                    <span class="circle">2</span>
+                    <span class="label">Envío</span>
+                  </li>
+
+                  <li class="step" data-step="3">
+                    <span class="circle">3</span>
+                    <span class="label">Pago</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <form>
               <div class="contenedor-campo">
                 <div class="campo">
@@ -81,7 +86,7 @@
                   <label class="label" for="telefono">Teléfono *</label>
                   <input
                     class="input"
-                    type="tel"
+                    type="number"
                     id="telefono"
                     name="telefono"
                     required
@@ -121,7 +126,7 @@
                   <label class="label" for="numero">Número de Documento</label>
                   <input
                     class="input"
-                    type="tel"
+                    type="number"
                     id="numero"
                     name="numero"
                     required
@@ -148,27 +153,28 @@
             <span>Paso 2: Datos de Envío</span>
             <span class="icono-flecha">▼</span>
           </div>
-          <div class="stepper-wrapper">
-          <div class="stepper-container">
-  <ul class="stepper">
-    <li class="step active" data-step="1">
-      <span class="circle">1</span>
-      <span class="label">Datos personales</span>
-    </li>
 
-    <li class="step" data-step="2">
-      <span class="circle">2</span>
-      <span class="label">Envío</span>
-    </li>
-
-    <li class="step" data-step="3">
-      <span class="circle">3</span>
-      <span class="label">Pago</span>
-    </li>
-  </ul>
-</div>
-</div>
           <div class="contenido-seccion">
+            <div class="stepper-wrapper">
+              <div class="stepper-container">
+                <ul class="stepper">
+                  <li class="step active" data-step="1">
+                    <span class="circle">1</span>
+                    <span class="label">Datos personales</span>
+                  </li>
+
+                  <li class="step" data-step="2">
+                    <span class="circle">2</span>
+                    <span class="label">Envío</span>
+                  </li>
+
+                  <li class="step" data-step="3">
+                    <span class="circle">3</span>
+                    <span class="label">Pago</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <form>
               <div class="campo">
                 <label class="label" for="direccion">Dirección *</label>
@@ -199,7 +205,6 @@
                     type="text"
                     id="pais"
                     name="pais"
-                    value="España"
                     required
                   />
                 </div>
@@ -239,27 +244,28 @@
             <span>Paso 3: Datos de Pago</span>
             <span class="icono-flecha">▼</span>
           </div>
-          <div class="stepper-wrapper">
-          <div class="stepper-container">
-  <ul class="stepper">
-    <li class="step active" data-step="1">
-      <span class="circle">1</span>
-      <span class="label">Datos personales</span>
-    </li>
 
-    <li class="step" data-step="2">
-      <span class="circle">2</span>
-      <span class="label">Envío</span>
-    </li>
-
-    <li class="step" data-step="3">
-      <span class="circle">3</span>
-      <span class="label">Pago</span>
-    </li>
-  </ul>
-</div>
-</div>
           <div class="contenido-seccion">
+            <div class="stepper-wrapper">
+              <div class="stepper-container">
+                <ul class="stepper">
+                  <li class="step active" data-step="1">
+                    <span class="circle">1</span>
+                    <span class="label">Datos personales</span>
+                  </li>
+
+                  <li class="step" data-step="2">
+                    <span class="circle">2</span>
+                    <span class="label">Envío</span>
+                  </li>
+
+                  <li class="step" data-step="3">
+                    <span class="circle">3</span>
+                    <span class="label">Pago</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <form>
               <div class="campo">
                 <label class="label" for="titular"
@@ -317,7 +323,11 @@
               </div>
 
               <div class="botones">
-                <button type="button" class="boton boton-finalizar">
+                <button
+                  type="button"
+                  class="boton boton-finalizar"
+                  onclick="validarPaso(3)"
+                >
                   FINALIZAR
                 </button>
               </div>

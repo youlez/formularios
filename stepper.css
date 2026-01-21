@@ -1,0 +1,156 @@
+.stepper-container {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* PASO */
+.step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* LÍNEA ENTRE PASOS */
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: -50%;
+  width: 100%;
+  height: 3px;
+  background: #e0e0e0;
+  z-index: 0;
+  transition: background-color 0.4s ease;
+}
+
+
+.circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.4rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* TEXTO */
+.label {
+  font-size: 0.85rem;
+  color: #666;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.step:hover .circle {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.step:hover .label {
+  color: #008CD7;
+}
+
+.step.active .circle {
+  background: #008CD7;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(0, 140, 215, 0.45);
+  animation: pulse 0.5s ease;
+}
+
+.step.active .label {
+  color: #008CD7;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+.step.completed .circle {
+  background: #00B6EF;
+  color: #ffffff;
+}
+
+.step.completed::after {
+  background: #00B6EF;
+}
+
+.stepper-wrapper {
+  display: none;
+  justify-content: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.seccion-acordeon.activo .stepper-wrapper {
+  display: flex;
+}
+
+.seccion-acordeon .stepper-container {
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  background: #f9f9fc;
+  box-shadow: inset 0 0 0 1px #ececf2;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0 rgba(0, 140, 215, 0.5);
+  }
+  60% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(0, 140, 215, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .label {
+    font-size: 0.75rem;
+  }
+
+  .circle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .step:not(:last-child)::after {
+    top: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
